@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+  name: spring-resource-server
+  output.ansi.enabled: ALWAYS
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://127.0.0.1:8080/openid #The issuer is the Authorization server
+
+logging:
+  level:
+    org:
+      springframework:
+        security: trace
+
+
